@@ -162,4 +162,84 @@
 - **Дата и время прочтения (read_at):**
   Дата и время прочтения пользователем; `NULL`, если подсказка ещё не была прочитана.
 
----
+## Диаграммы связей (ERD)
+
+@startuml
+!define primaryKey(x) <b>x</b>
+!define foreignKey(x) <i>x</i>
+
+entity "Users" {
+    primaryKey(id): string (8)
+    name: string (unique)
+    foreignKey(tutor_id): Tutors.id
+    registered_at: datetime
+}
+
+entity "Tutors" {
+    primaryKey(id): string
+    name: string (unique, required)
+    email: string (unique)
+    password_hash: string
+    registered_at: datetime
+}
+
+entity "Topics" {
+    primaryKey(id): int
+    title: string
+}
+
+entity "Levels" {
+    primaryKey(id): string
+    title: string
+    points: int
+    foreignKey(topic_id): Topics.id
+}
+
+entity "User_Level" {
+    foreignKey(user_id): Users.id
+    foreignKey(level_id): Levels.id
+    completion_time: datetime
+    foreignKey(session_id): Sessions.id
+    primaryKey(user_id, level_id)
+}
+
+entity "Progress" {
+    foreignKey(user_id): Users.id
+    foreignKey(topic_id): Topics.id
+    completion_percentage: int (0-100)
+    primaryKey(user_id, topic_id)
+}
+
+entity "Sessions" {
+    primaryKey(id): string
+    foreignKey(user_id): Users.id
+    start_time: datetime
+    end_time: datetime
+    ip: string
+    device_type: string
+    browser: string
+    referrer: string
+}
+
+entity "Hints" {
+    foreignKey(user_id): Users.id
+    foreignKey(tutor_id): Tutors.id
+    message: text
+    created_at: datetime
+    read_at: datetime?
+    primaryKey(user_id, tutor_id, created_at)
+}
+
+' Связи
+Users::tutor_id --> Tutors::id
+Levels::topic_id --> Topics::id
+User_Level::user_id --> Users::id
+User_Level::level_id --> Levels::id
+User_Level::session_id --> Sessions::id
+Progress::user_id --> Users::id
+Progress::topic_id --> Topics::id
+Sessions::user_id --> Users::id
+Hints::user_id --> Users::id
+Hints::tutor_id --> Tutors::id
+@enduml
+
