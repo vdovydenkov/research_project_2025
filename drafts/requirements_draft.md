@@ -72,18 +72,18 @@
 
 **Общие**
 - Доступность оффлайн: нет
-- Скорость загрузки: 5 сек.
+- Скорость загрузки: до 5 секунд.
 
 **Поддержка браузеров**
-- Google Chrome
-- Yandex Browser
-- Microsoft Edge
-- Mozilla Firefox
+- Google Chrome for Windows, версия 135.0.7049.41 и выше.
+- Yandex Browser for Windows, версия 25.2.4 и выше.
+- Microsoft Edge for Windows, версия 131 и выше.
+- Mozilla Firefox for Windows, версия 126 и выше.
 
 **Поддержка скринридеров**
-- Jaws
-- NVDA
-- Voiceover
+- JAWS for Windows, версия 2022.2402.1 и выше.
+- NVDA, версия 2024.4.2 и выше.
+- VoiceOver for iOS, версия 18.3.1 и выше.
 
 **Инструменты реализации**
 Движок: Django.
