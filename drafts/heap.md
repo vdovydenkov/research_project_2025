@@ -31,5 +31,5 @@ Statcounter,  Доли браузеров, февраль 2025
 
 (Desktop Browser Market Share Russian Federation | Statcounter Global Stats)[https://gs.statcounter.com/browser-market-share/desktop/russian-federation]
 
-
+Навык-этап: Загрузка файлов
 
