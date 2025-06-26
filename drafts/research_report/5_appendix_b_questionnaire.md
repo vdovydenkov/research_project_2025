@@ -1,4 +1,5 @@
-# Приложение. "Онлайн-тренажёр для незрячих и слабовидящих: сбор требований"
+# Приложение B. Анкета
+# Онлайн-тренажёр для незрячих и слабовидящих: сбор требований
 
 Мы разрабатываем онлайн-тренажёр для обучения незрячих и слабовидящих пользователей работе с веб-интерфейсами.
 
@@ -120,5 +121,4 @@ _Пропустить, если не используете преподават
 
 ---
 
-[Ссылка на форму](https://docs.google.com/forms/d/e/1FAIpQLSdphRcWY4uk77B7qszxN6Da7LvY_Ah4b0ULSZXaE0IviUDFRg/viewform?usp=header)
-[Короткая ссылка на форму](https://forms.gle/Zx9FQgD78rEtDq5W9)
+[Форма](https://docs.google.com/forms/d/e/1FAIpQLSdphRcWY4uk77B7qszxN6Da7LvY_Ah4b0ULSZXaE0IviUDFRg/viewform?usp=header)
